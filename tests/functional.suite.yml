@@ -1,0 +1,19 @@
+# Codeception Test Suite Configuration
+#
+# Suite for functional (integration) tests
+# Emulate web requests and make application process them
+# Include one of framework modules (Symfony2, Yii2, Laravel5) to use it
+
+class_name: FunctionalTester
+modules:
+    enabled:
+        # add framework module here
+        - \Helper\Functional
+        - WebDriver:
+            url: 'https://www.google.com.br'
+            browser: chrome
+            port: 9515
+            capabilities:
+                chromeOptions: # additional chrome options
+                    args: ["--headless"]
+#                    binary: "/Users/jpmirandas/Downloads/cua/chromedriver"
