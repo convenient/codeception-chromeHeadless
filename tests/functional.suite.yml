@@ -15,5 +15,5 @@ modules:
             port: 9515
             capabilities:
                 chromeOptions: # additional chrome options
-                    args: ["--headless", "--ignore-certificate-errors"]
-#                    binary: "/Users/jpmirandas/Downloads/chromedriver/2.32/chromedriver"
+                    args: ["--url-base=/wd/hub", "--headless", "--ignore-certificate-errors"]
+#                    binary: ""
