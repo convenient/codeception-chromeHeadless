@@ -10,7 +10,7 @@ modules:
         # add framework module here
         - \Helper\Functional
         - WebDriver:
-            url: 'https://www.google.com.br'
+            url: 'https://example.com/'
             browser: chrome
             port: 9515
             capabilities:

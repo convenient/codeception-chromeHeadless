@@ -13,10 +13,3 @@ extensions:
     enabled:
         - Codeception\Extension\RunFailed
         - Codeception\Extension\Recorder
-modules:
-    config:
-        Db:
-            dsn: ''
-            user: ''
-            password: ''
-            dump: tests/_data/dump.sql

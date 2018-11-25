@@ -1,0 +1,19 @@
+os: osx
+
+language: php
+php:
+  - 7.1
+
+before_install:
+  - rm ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+
+install:
+  - composer self-update
+  - composer install -o --no-interaction --prefer-dist
+  - ./init.sh
+
+script:
+  - vendor/bin/codecept run -vvv
+
+cache:
+  directories: $HOME/.composer/cache
