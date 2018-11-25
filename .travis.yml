@@ -1,11 +1,11 @@
-os: osx
+language: php
+php:
+  - 7.1
+
+before_install:
+  - rm ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
 
 install:
-  - git clone git://github.com/phpenv/phpenv.git ~/.phpenv
-  - export PATH=$PATH:/home/travis/.phpenv/bin
-  - eval "$(phpenv init -)"
-  - git clone https://github.com/php-build/php-build $(phpenv root)/plugins/php-build
-  - phpenv global 7.1
   - composer self-update
   - composer install -o --no-interaction --prefer-dist
   - ./init.sh
