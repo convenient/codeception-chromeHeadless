@@ -1,8 +1,9 @@
 os: osx
 
-language: php
-
 install:
+  - export PATH=$PATH:/home/travis/.phpenv/bin
+  - eval "$(phpenv init -)"
+  - phpenv global 7.1
   - composer self-update
   - composer install -o --no-interaction --prefer-dist
   - ./init.sh
