@@ -1,11 +1,6 @@
 os: osx
 
 language: php
-php:
-  - 7.1
-
-before_install:
-  - rm ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
 
 install:
   - composer self-update
