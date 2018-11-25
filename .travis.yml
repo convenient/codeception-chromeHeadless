@@ -6,6 +6,7 @@ before_install:
   - rm ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
 
 install:
+  - sudo apt-get --only-upgrade install google-chrome-stable -y
   - composer self-update
   - composer install -o --no-interaction --prefer-dist
   - ./init.sh
